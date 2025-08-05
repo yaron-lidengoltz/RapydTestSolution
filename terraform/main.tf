@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1"  # You can change this to your desired region
+  region = "eu-west-1"
 }
 
 data "aws_caller_identity" "current" {}

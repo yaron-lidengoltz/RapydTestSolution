@@ -2,9 +2,9 @@
 setlocal
 
 :: ===== SET YOUR AWS CREDENTIALS =====
-set AWS_ACCESS_KEY_ID = "*****"
-set AWS_SECRET_ACCESS_KEY = "*****"
-set AWS_DEFAULT_REGION = "eu-west-1"
+set AWS_ACCESS_KEY_ID=AAAAA
+set AWS_SECRET_ACCESS_KEY=BBBBB
+set AWS_DEFAULT_REGION="eu-west-1"
 
 
 
@@ -31,6 +31,9 @@ terraform init || goto :error
 
 echo 🔍 Validating Terraform...
 terraform validate || goto :error
+
+echo 🛠️ Planning Terraform...
+terraform plan || goto :error
 
 echo 🛠️ Applying Terraform...
 terraform apply -auto-approve || goto :error
