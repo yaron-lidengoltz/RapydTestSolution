@@ -8,6 +8,11 @@ output "private_subnet_ids" {
   value       = aws_subnet.private[*].id
 }
 
+output "private_route_table_id" {
+  description = "Private route table ID"
+  value       = aws_route_table.private.id
+}
+
 output "availability_zones" {
   description = "List of availability zones used"
   value       = var.azs
